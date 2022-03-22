@@ -5,6 +5,11 @@
       <v-app-bar-title style="cursor: pointer" @click="$router.push('/')">
         보답
       </v-app-bar-title>
+      <v-avatar color="info">
+        <v-icon>
+          mdi-account-circle
+        </v-icon>
+      </v-avatar>
     </v-app-bar>
     <v-navigation-drawer width="225" permanent v-model="drawer">
       <v-list>
@@ -13,17 +18,17 @@
             <v-list-item :="props" :title="menu.title"></v-list-item>
           </template>
           <v-list-item
-            v-for="subMenu in menu.subMenus"
-            :key="subMenu.id"
-            :title="subMenu.title"
-            :value="subMenu.title"
-            :to="menu.route + subMenu.route"
+              v-for="subMenu in menu.subMenus"
+              :key="subMenu.id"
+              :title="subMenu.title"
+              :value="subMenu.title"
+              :to="menu.route + subMenu.route"
           ></v-list-item>
         </v-list-group>
       </v-list>
     </v-navigation-drawer>
     <v-main>
-      <router-view />
+      <router-view/>
     </v-main>
   </v-app>
 </template>
@@ -36,7 +41,7 @@ export default {
       menus: [
         {
           id: 1,
-          title: "Default",
+          title: "테스트",
           route: "",
           subMenus: [
             {
@@ -53,17 +58,17 @@ export default {
         },
         {
           id: 2,
-          title: "Manage",
+          title: "관리",
           route: "/manage",
           subMenus: [
             {
               id: 21,
-              title: "Account",
+              title: "계정관리",
               route: "/account",
             },
             {
               id: 22,
-              title: "Menu",
+              title: "메뉴관리",
               route: "/menu",
             },
           ],
