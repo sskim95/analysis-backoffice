@@ -49,11 +49,6 @@ export default {
               title: "About",
               route: "/about",
             },
-            {
-              id: 13,
-              title: "Item",
-              route: "/item",
-            },
           ],
         },
         {
